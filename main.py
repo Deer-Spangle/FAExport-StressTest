@@ -1,6 +1,8 @@
+import multiprocessing
 import threading
 import time
 import uuid
+from multiprocessing import Pool
 
 import docker
 import requests
@@ -15,14 +17,17 @@ base_cookies = {
     "b": "2d0163b8-da67-42fc-8a3a-9e57f66eacaa"
 }
 flask_port = 7652
+cookie_fmt = f"a={0};b={1}"
 
 
 @app.route("/msg/others/")
 def notifications_page():
-    result = notif_template.replace("{{username}}", f"a={request.cookies.get('a')};b={request.cookies.get('b')}")
+    cookie_str = cookie_fmt.format(request.cookies.get("a"), request.cookies.get("b"))
+    result = notif_template.replace("{{username}}", cookie_str)
     return result
 
 
+# noinspection HttpUrlsUsage,PyBroadException
 class ExportContainer:
     def __init__(self):
         self.client = docker.from_env()
@@ -64,31 +69,33 @@ class ExportContainer:
         self.stop()
 
 
-def check_notifs():
+def check_notifications(num: int = 0):
     a = uuid.uuid4()
     b = uuid.uuid4()
-    cookie_str = f"a={a};b={b}"
+    cookie_str = cookie_fmt.format(a, b)
     try:
         resp = requests.get("http://localhost:9292/notifications/others.json", headers={"FA_COOKIE": cookie_str})
         data = resp.json()
     except Exception as e:
-        print(f"That request failed: {e}")
+        print(f"That request {num} failed: {e}")
         return
     current_username = data["current_user"]["name"]
     if current_username == cookie_str:
-        print("All good")
+        print(f"All good: {num}")
     else:
-        print(f"Darn. It gave:")
+        print(f"Darn on {num}. It gave:")
         print(current_username)
         print("I wanted: ")
         print(cookie_str)
+        print("Base is: ")
+        print(cookie_fmt.format(base_cookies["a"], base_cookies["b"]))
         raise ValueError
 
 
 def check_mock():
     a = uuid.uuid4()
     b = uuid.uuid4()
-    cookie_str = f"a={a};b={b}"
+    cookie_str = cookie_fmt.format(a, b)
     try:
         resp = requests.get(
             f"http://127.0.0.1:{flask_port}/msg/others/",
@@ -106,6 +113,10 @@ def check_mock():
     else:
         print(f"Darn. Mock is missing the cookie")
         raise ValueError
+
+
+def multi_check_notifications(p: Pool, n: int):
+    p.map(check_notifications, range(n))
 
 
 class ServerThread(threading.Thread):
@@ -133,8 +144,9 @@ if __name__ == '__main__':
     with ServerThread():
         with ExportContainer():
             count = 0
+            pool = multiprocessing.Pool(4)
             while True:
                 print(f"Checking: {count}")
                 check_mock()
-                check_notifs()
+                multi_check_notifications(pool, 5)
                 count += 1
