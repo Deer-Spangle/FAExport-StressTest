@@ -17,7 +17,7 @@ base_cookies = {
     "b": "2d0163b8-da67-42fc-8a3a-9e57f66eacaa"
 }
 flask_port = 7652
-cookie_fmt = f"a={0};b={1}"
+cookie_fmt = "a={0};b={1}"
 
 
 @app.route("/msg/others/")
