@@ -1,0 +1,683 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" class="no-js" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>User control panel -- Fur Affinity [dot] net</title>
+
+    <link rel="icon" href="/themes/classic/img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/themes/classic/img/favicon.ico" type="image/x-icon" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=EDGE" />
+    <meta name="ero_verify" content="1d42658d34f4c71f70af90b130f37c66" />
+
+    <meta name="description"        content="Fur Affinity is the internet's largest online gallery for furry, anthro, dragon, brony art work and more!" />
+    <meta name="keywords"           content="fur furry furries fursuit fursuits brony bronies zootopia scalies anthro anthropormophic art online gallery" />
+    <meta name="copyright"          content="Frost Dragon Art LLC" />
+    <meta name="distribution"       content="global" />
+
+
+    <!-- og -->
+        <meta property="og:image" content="https://www.furaffinity.net/themes/classic/img/banners/fa_logo.png?v2" />
+
+    <!-- twitter -->
+        <meta name="twitter:image" content="https://www.furaffinity.net/themes/classic/img/banners/fa_logo.png?v2" />
+
+    <script type="text/javascript">
+        var _faurl={d:'//d.furaffinity.net',a:'//a.furaffinity.net',r:'//rv.furaffinity.net',t:'//t.furaffinity.net',pb:'/themes/classic/js/prebid-6.1.0-fa.js'};
+    </script>
+    <script type="text/javascript" src="/themes/classic/js/common.js?u=2021111800"></script>
+    <link type="text/css" rel="stylesheet" href="/themes/classic/css/dark.css?u=2021111800" />
+
+    <!-- browser hints -->
+    <link rel="preconnect" href="//t.furaffinity.net" />
+    <link rel="preconnect" href="//a.furaffinity.net" />
+    <link rel="preconnect" href="//rv.furaffinity.net" />
+    <link rel="preconnect" href="https://www15.smartadserver.com" />
+
+    <link rel="preload" href="/themes/classic/js/prototype.1.7.3.min.js" as="script" />
+    <link rel="preload" href="/themes/classic/js/script.js?u=2021111800" as="script" />
+    <link rel="preload" href="/themes/classic/js/prebid-6.1.0-fa.js" as="script" />
+    <link rel="preload" href="https://ced.sascdn.com/tag/3957/smart.js" as="script" />
+    <link rel="preload" href="https://cdn.intergient.com/ramp.js" as="script" />
+    <link rel="preload" href="https://config.playwire.com/1024443/v2/websites/73185/banner.json" as="fetch" type="application/json" crossorigin="anonymous" />
+</head>
+
+<!-- EU request: no -->
+<body data-static-path="/themes/classic" id="pageid-messagecenter-other">
+    <a name="top"></a>
+
+    <!-- top-menu -->
+    <!-- top-menu -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="block-menu-top">
+    <tr>
+        <td class="header_bkg">
+            <ul class="dropdown dropdown-horizontal">
+                <li><a href="/browse/">Browse</a></li>
+                                <li><a href="/submit/">Submit</a></li>
+                                <li><a href="#" class="dir">&#9660; Community</a>
+                    <ul>
+                        <li><a href="https://forums.furaffinity.net/">Fur Affinity Forums</a></li>
+                        <li><a href="https://twitter.com/furaffinity">Twitter</a></li>
+                        <li><a href="https://www.facebook.com/furaffinity">Facebook</a></li>
+                        <li><a href="/blm/">Black Lives Matter</a></li>
+                        <li><hr></li>
+                        <li><a href="/advertising">Advertising</a>
+                    </ul>
+                </li>
+                <li><a href="#" class="dir">&#9660; Support</a>
+                    <ul>
+                        <li><a href="/journals/fender/">News and Updates</a></li>
+                        <li><a href="/help/">Help and Support</a></li>
+                        <!--li><a href="/help">Knowledgebase</a></li-->
+                        <li><hr></li>
+                                                    <li><a href="/controls/troubletickets/">Report a Problem</a></li>
+                                                <li><a href="/tos">Terms of Service</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/coc">Code of Conduct</a></li>
+                        <li><a href="/aup">Upload Policy</a></li>
+                    </ul>
+                </li>
+                <li class="search-box-container">
+                    <form method="get" action="/search/">
+                        <input type="text" name="q" placeholder="Search">
+                        <a href="/search">&nbsp</a>
+                    </form>
+                </li>
+            </ul>
+        </td>
+
+        <td class="header_bkg">
+            <ul class="dropdown dropdown-horizontal dropdown-left">
+                <li><a id="my-username" href="/user/{{username}}/">
+                ~{{username}}</a></li>
+                <li><a href="#" class="dir">&#9660; My FA</a>
+                    <ul>
+                        <li><a href="/msg/pms/">Notes</a></li>
+                        <li><a href="/controls/journal/">Journals</a></li>
+                        <li><hr></li>
+                        <li><a href="#">&#9660; Account Management</a>
+                            <ul>
+                                <li><a href="/controls/settings/">Account Settings</a></li>
+                                <li><a href="/controls/site-settings/">Site Settings</a></li>
+                                <li><a href="/controls/user-settings/">User Settings</a></li>
+                                <li><a href="/controls/profile/">Profile Info</a></li>
+                                <li><a href="/controls/contacts/">Contacts / Social Media</a></li>
+                                <li><a href="/controls/avatar/">Upload / Change Avatar</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">&#9660; Page Management</a>
+                            <ul>
+                                <li><a href="/controls/journal/">Journals</a></li>
+                                <li><a href="/controls/submissions/">Submissions</a></li>
+                                <li><a href="/controls/folders/submissions/">Gallery Folders</a></li>
+                                <li><a href="/commissions/{{username}}/">Commission Info</a></li>
+                                <li><a href="/controls/shouts/">Page Shouts</a></li>
+                                <li><a href="/controls/favorites/">Favorites</a></li>
+                                <li><a href="/controls/buddylist/">Watch List</a></li>
+                                <li><a href="/controls/badges/">Badges</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">&#9660; Site Security</a>
+                            <ul>
+                                <li><a href="/controls/sessions/logins/">Active Sessions</a></li>
+                                <li><a href="/controls/sessions/logs/">Activity Log</a></li>
+                                <li><a href="/controls/sessions/labels/">Browser Labels</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">&#9660; Support Fur Affinity</a>
+                            <ul>
+                                <li><a href="/plus/">FA+ Subscription</a></li>
+                                <li><a href="https://shop.furaffinity.net/">FA Merch Store</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/controls/troubletickets/">Report a Problem</a></li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li class="noblock">
+                    <a class="notification-container" title="352 Submission Notifications" href="/msg/submissions/">352<span>S</span></a>,&nbsp;<a class="notification-container" title="3 Comment Notifications"       href="/msg/others/#comments">3<span>C</span></a>,&nbsp;<a class="notification-container" title="19 Journal Notifications"       href="/msg/others/#journals">19<span>J</span></a>,&nbsp;<a class="notification-container" title="14 Favorite Notifications"     href="/msg/others/#favorites">14<span>F</span></a>,&nbsp;<a class="notification-container" title="7 Watch Notifications"          href="/msg/others/#watches">7<span>W</span></a>                </li>
+
+                                    <li id="sfw-toggle" class="noblock "><a href="?" title="Toggle to hide Mature and Adult submissions.">SFW</a></li>
+                                <li class="noblock"><form class="post-btn logout-link" method="post" action="/logout/"><button type="submit">Log Out</button><input type="hidden" name="key" value="f79679a119988604d1adf43d1e97156f261ddc6f"/></form>
+<script type="text/javascript">
+    _fajs.push(['init_logout_button', '.logout-link button']);
+</script>
+</li>
+            </ul>
+
+            <script type="text/javascript">
+                _fajs.push(['init_sfw_button', 'sfw-toggle']);
+            </script>
+        </td>
+    </tr>
+</table>
+<!-- /top-menu -->
+    <!-- /top-menu -->
+
+    <!-- banner -->
+    <div class="block-banners clearfix">
+        <a href="/" id="fa_header"></a>
+
+<div class="headerAds">
+    <div data-id="header_right_left"  class="headerAds__slot format--faSmallRectangle jsAdSlot"></div>
+    <div data-id="header_right_right" class="headerAds__slot format--faSmallRectangle jsAdSlot"></div>
+</div>
+    </div>
+    <!-- /banner -->
+
+
+<div id="news" class="date-1641398503">
+    <img class="dismiss" src="/themes/classic/img/close_panel.png" title="Dismiss" />
+    <a href="/journal/10095726">1/5/22 - Furry Musicians' Express Yourself Contest</a>
+</div>
+
+<script type="text/javascript">
+    _fajs.push(['init_news_block', 'news']);
+</script>
+
+
+<div class="leaderboardAd">
+    <div data-id="header_middle" class="leaderboardAd__slot format--leaderboard jsAdSlot"></div>
+</div>
+
+    <br />
+
+    <div style="width:98%; margin: 0 auto;">
+<!-- /header -->
+
+<div id="messagecenter-other">
+
+            <form id="messages-form" method="post" action="/msg/others/">
+
+                    <fieldset id="messages-watches">
+                <h3><input type="submit" class="button" name="nuke-watches" value="Nuke watches" />New Watches</h3>
+                <ul class="message-stream" id="watches">
+                    <li>
+    <table cellpadding="0" cellspacing="0" align="center">
+        <tr>
+            <td class="avatar">
+                <img src="/themes/classic/img/avatar.gif?aaa" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="checkbox"><input type="checkbox" name="watches[]" value="81067864" checked="checked"></div>
+            </td>
+        </tr>
+    </table>
+
+    <div class="info"><span>Removed</span> <small>by the user</small></div>
+</li>
+
+<li>
+	<table cellpadding="0" cellspacing="0" align="center">
+		<tr>
+			<td class="avatar"><a href="/user/taztiger74/"><img class="avatar" src="//a.furaffinity.net/1463684635/taztiger74.gif"/></a></td>
+		</tr>
+		<tr>
+			<td><div class="checkbox"><input type="checkbox" name="watches[]" value="80123764"></div></td>
+		</tr>
+	</table><div class="info"><span>taztiger74</span> <small><span title="Feb 5th, 2017 01:56 AM" class="popup_date">5 years ago</span></small></div>
+</li>
+
+
+<li>
+	<table cellpadding="0" cellspacing="0" align="center">
+		<tr>
+			<td class="avatar"><a href="/user/sergals/"><img class="avatar" src="//a.furaffinity.net/1475390324/sergals.gif"/></a></td>
+		</tr>
+		<tr>
+			<td><div class="checkbox"><input type="checkbox" name="watches[]" value="80011634"></div></td>
+		</tr>
+	</table><div class="info"><span>sergals</span> <small><span title="Feb 1st, 2017 04:09 PM" class="popup_date">5 years ago</span></small></div>
+</li>
+
+
+<li>
+	<table cellpadding="0" cellspacing="0" align="center">
+		<tr>
+			<td class="avatar"><a href="/user/dr-spangle/"><img class="avatar" src="//a.furaffinity.net/1512752660/dr-spangle.gif"/></a></td>
+		</tr>
+		<tr>
+			<td><div class="checkbox"><input type="checkbox" name="watches[]" value="80007359"></div></td>
+		</tr>
+	</table><div class="info"><span>dr-spangle</span> <small><span title="Feb 1st, 2017 11:23 AM" class="popup_date">5 years ago</span></small></div>
+</li>
+
+
+<li>
+	<table cellpadding="0" cellspacing="0" align="center">
+		<tr>
+			<td class="avatar"><a href="/user/s0uthw3st/"><img class="avatar" src="//a.furaffinity.net/1626812964/s0uthw3st.gif"/></a></td>
+		</tr>
+		<tr>
+			<td><div class="checkbox"><input type="checkbox" name="watches[]" value="79990692"></div></td>
+		</tr>
+	</table><div class="info"><span>s0uthw3st</span> <small><span title="Feb 1st, 2017 12:25 AM" class="popup_date">5 years ago</span></small></div>
+</li>
+
+
+<li>
+	<table cellpadding="0" cellspacing="0" align="center">
+		<tr>
+			<td class="avatar"><a href="/user/nea/"><img class="avatar" src="//a.furaffinity.net/1571425163/nea.gif"/></a></td>
+		</tr>
+		<tr>
+			<td><div class="checkbox"><input type="checkbox" name="watches[]" value="79990164"></div></td>
+		</tr>
+	</table><div class="info"><span>Nea</span> <small><span title="Feb 1st, 2017 12:06 AM" class="popup_date">5 years ago</span></small></div>
+</li>
+
+
+<li>
+	<table cellpadding="0" cellspacing="0" align="center">
+		<tr>
+			<td class="avatar"><a href="/user/arcaninescurse/"><img class="avatar" src="//a.furaffinity.net/1486927234/arcaninescurse.gif"/></a></td>
+		</tr>
+		<tr>
+			<td><div class="checkbox"><input type="checkbox" name="watches[]" value="79990007"></div></td>
+		</tr>
+	</table><div class="info"><span>ArcaninesCurse</span> <small><span title="Feb 1st, 2017 12:02 AM" class="popup_date">5 years ago</span></small></div>
+</li>
+
+                    <li class="section-controls">
+                        <input class="button mark-all hidden"  type="button" value="Select all" />
+                        <input class="button remove"           type="submit" value="Remove selected" name="remove-watches" />
+                    </li>
+                </ul>
+            </fieldset>
+
+
+
+
+
+
+                    <fieldset id="messages-shouts">
+                <h3><input type="submit" class="button" name="nuke-shouts" value="Nuke shouts" />New shouts</h3>
+                <ul class="message-stream">
+
+<li><input type="checkbox" name="shouts[]" value="41516654">From <a href="/user/snowthelioness/">Snowthelioness</a>, posted <span title="on Feb 6, 2017 07:51 AM" class="popup_date">5 years ago</span></li>
+
+<li><input type="checkbox" name="shouts[]" value="41505057">From <a href="/user/taztiger74/">taztiger74</a>, posted <span title="on Feb 5, 2017 01:58 AM" class="popup_date">5 years ago</span></li>
+
+<li><input type="checkbox" name="shouts[]" value="41479137">From <a href="/user/kato/">Kato</a>, posted <span title="on Feb 2, 2017 02:34 AM" class="popup_date">5 years ago</span></li>
+                    <li class="section-controls">
+                        <input class="button mark-all hidden"  type="button" value="Select all" />
+                        <input class="button remove"           type="submit" value="Remove selected" name="remove-shouts"  />
+                    </li>
+                </ul>
+            </fieldset>
+
+
+                    <fieldset id="messages-favorites">
+                <h3><input type="submit" class="button" name="nuke-favorites" value="Nuke favorites" />New favorites</h3>
+                <ul class="message-stream" id="favorites">
+
+<li><input type="checkbox" name="favorites[]" value="1061200930"><a href="/user/sametes/">sametes</a> has favorited "<a href="/view/22467217/">Shared pleasure</a>" <span title="Mar 9th, 2021 03:32 PM" class="popup_date">10 months ago</span></li>
+
+<li><input type="checkbox" name="favorites[]" value="525914105"><a href="/user/taztiger74/">taztiger74</a> has favorited "<a href="/view/22467217/">Shared pleasure</a>" <span title="Feb 8th, 2017 05:36 AM" class="popup_date">5 years ago</span></li>
+
+<li><input type="checkbox" name="favorites[]" value="524047023"><a href="/user/azulicefang/">AzulIceFang</a> has favorited "<a href="/view/22467217/">Shared pleasure</a>" <span title="Feb 2nd, 2017 02:22 AM" class="popup_date">5 years ago</span></li>
+
+<li><input type="checkbox" name="favorites[]" value="523922562"><a href="/user/aerogon/">Aerogon</a> has favorited "<a href="/view/22467217/">Shared pleasure</a>" <span title="Feb 1st, 2017 05:56 PM" class="popup_date">5 years ago</span></li>
+
+<li><input type="checkbox" name="favorites[]" value="523817872"><a href="/user/delete341/">delete341</a> has favorited "<a href="/view/22467217/">Shared pleasure</a>" <span title="Feb 1st, 2017 06:33 AM" class="popup_date">5 years ago</span></li>
+
+<li><input type="checkbox" name="favorites[]" value="523736245"><a href="/user/sorrowmoon/">Sorrowmoon</a> has favorited "<a href="/view/22467075/">Reference (adopt)</a>" <span title="Feb 1st, 2017 01:14 AM" class="popup_date">5 years ago</span></li>
+
+<li><input type="checkbox" name="favorites[]" value="523723012"><a href="/user/s0uthw3st/">s0uthw3st</a> has favorited "<a href="/view/22467075/">Reference (adopt)</a>" <span title="Feb 1st, 2017 12:26 AM" class="popup_date">5 years ago</span></li>
+
+<li><input type="checkbox" name="favorites[]" value="523722792"><a href="/user/decaffeinatedbunny/">DecaffeinatedBunny</a> has favorited "<a href="/view/22467075/">Reference (adopt)</a>" <span title="Feb 1st, 2017 12:25 AM" class="popup_date">5 years ago</span></li>
+
+<li><input type="checkbox" name="favorites[]" value="523721206"><a href="/user/aduro21/">Aduro21</a> has favorited "<a href="/view/22467217/">Shared pleasure</a>" <span title="Feb 1st, 2017 12:19 AM" class="popup_date">5 years ago</span></li>
+
+<li><input type="checkbox" name="favorites[]" value="523721177"><a href="/user/sexysaphira/">SexySaphira</a> has favorited "<a href="/view/22467217/">Shared pleasure</a>" <span title="Feb 1st, 2017 12:19 AM" class="popup_date">5 years ago</span></li>
+
+<li><input type="checkbox" name="favorites[]" value="523721142"><a href="/user/huluvoo/">Huluvoo</a> has favorited "<a href="/view/22467217/">Shared pleasure</a>" <span title="Feb 1st, 2017 12:19 AM" class="popup_date">5 years ago</span></li>
+
+<li><input type="checkbox" name="favorites[]" value="523720931"><a href="/user/cutelittlefurryhusky/">CuteLittleFurryHusky</a> has favorited "<a href="/view/22467217/">Shared pleasure</a>" <span title="Feb 1st, 2017 12:18 AM" class="popup_date">5 years ago</span></li>
+
+<li><input type="checkbox" name="favorites[]" value="523716933"><a href="/user/nea/">Nea</a> has favorited "<a href="/view/22467075/">Reference (adopt)</a>" <span title="Feb 1st, 2017 12:04 AM" class="popup_date">5 years ago</span></li>
+
+<li><input type="checkbox" name="favorites[]" value="523716799"><a href="/user/cutelittlefurryhusky/">CuteLittleFurryHusky</a> has favorited "<a href="/view/22467075/">Reference (adopt)</a>" <span title="Feb 1st, 2017 12:04 AM" class="popup_date">5 years ago</span></li>
+                    <li class="section-controls">
+                        <input class="button mark-all hidden"  type="button" value="Select all" />
+                        <input class="button remove"           type="submit" value="Remove selected" name="remove-favorites"  />
+                    </li>
+                </ul>
+            </fieldset>
+
+
+
+                    <fieldset id="messages-journals">
+                <h3><input type="submit" class="button" name="nuke-journals" value="Nuke journals" />New journals</h3>
+                <ul class="message-stream" id="journals">
+
+<li><input type="checkbox" name="journals[]" value="10080946">"<a href="/journal/10080946/">Merry Christmas!</a>", posted by <a href="/user/kato/">Kato</a> <span title="on Dec 24, 2021 06:54 PM" class="popup_date">2 weeks ago</span></li>
+
+<li><input type="checkbox" name="journals[]" value="9474864">"<a href="/journal/9474864/">Hello there!</a>", posted by <a href="/user/kato/">Kato</a> <span title="on Apr 24, 2020 03:19 AM" class="popup_date">a year ago</span></li>
+
+<li><input type="checkbox" name="journals[]" value="9296162">"<a href="/journal/9296162/">It's Friday again</a>", posted by <a href="/user/kato/">Kato</a> <span title="on Oct 19, 2019 02:51 AM" class="popup_date">2 years ago</span></li>
+
+<li><input type="checkbox" name="journals[]" value="9270336">"<a href="/journal/9270336/">Mow</a>", posted by <a href="/user/kato/">Kato</a> <span title="on Sep 20, 2019 05:58 PM" class="popup_date">2 years ago</span></li>
+
+<li><input type="checkbox" name="journals[]" value="9156950">"<a href="/journal/9156950/">I have stuff to upload</a>", posted by <a href="/user/kato/">Kato</a> <span title="on May 28, 2019 04:35 AM" class="popup_date">2 years ago</span></li>
+
+<li><input type="checkbox" name="journals[]" value="8954071">"<a href="/journal/8954071/">MFF 2018 </a>", posted by <a href="/user/taztiger74/">taztiger74</a> <span title="on Nov 23, 2018 08:09 PM" class="popup_date">3 years ago</span></li>
+
+<li><input type="checkbox" name="journals[]" value="8850309">"<a href="/journal/8850309/">Leo's Stripeymew Stickers</a>", posted by <a href="/user/s0uthw3st/">s0uthw3st</a> <span title="on Aug 22, 2018 03:28 AM" class="popup_date">3 years ago</span></li>
+
+<li><input type="checkbox" name="journals[]" value="8848552">"<a href="/journal/8848552/">Thing</a>", posted by <a href="/user/kato/">Kato</a> <span title="on Aug 20, 2018 06:07 PM" class="popup_date">3 years ago</span></li>
+
+<li><input type="checkbox" name="journals[]" value="8825323">"<a href="/journal/8825323/">Wiki on What are Furries </a>", posted by <a href="/user/taztiger74/">taztiger74</a> <span title="on Jul 31, 2018 05:44 PM" class="popup_date">3 years ago</span></li>
+
+<li><input type="checkbox" name="journals[]" value="8779323">"<a href="/journal/8779323/">Ask me stuff!</a>", posted by <a href="/user/s0uthw3st/">s0uthw3st</a> <span title="on Jun 23, 2018 12:08 AM" class="popup_date">3 years ago</span></li>
+
+<li><input type="checkbox" name="journals[]" value="8658633">"<a href="/journal/8658633/">Meow.</a>", posted by <a href="/user/kato/">Kato</a> <span title="on Mar 16, 2018 06:03 PM" class="popup_date">3 years ago</span></li>
+
+<li><input type="checkbox" name="journals[]" value="8647102">"<a href="/journal/8647102/">How I got here</a>", posted by <a href="/user/taztiger74/">taztiger74</a> <span title="on Mar 7, 2018 04:11 AM" class="popup_date">3 years ago</span></li>
+
+<li><input type="checkbox" name="journals[]" value="8643751">"<a href="/journal/8643751/">Time to upload a massive backlog! </a>", posted by <a href="/user/kato/">Kato</a> <span title="on Mar 4, 2018 03:38 PM" class="popup_date">4 years ago</span></li>
+
+<li><input type="checkbox" name="journals[]" value="8642007">"<a href="/journal/8642007/">[CLOSED] 500 Watchers Auction - Part 2!</a>", posted by <a href="/user/s0uthw3st/">s0uthw3st</a> <span title="on Mar 3, 2018 03:46 AM" class="popup_date">4 years ago</span></li>
+
+<li><input type="checkbox" name="journals[]" value="8639298">"<a href="/journal/8639298/">[CLOSED] 500 Watchers Auction</a>", posted by <a href="/user/s0uthw3st/">s0uthw3st</a> <span title="on Mar 1, 2018 02:24 AM" class="popup_date">4 years ago</span></li>
+
+<li><input type="checkbox" name="journals[]" value="8633312">"<a href="/journal/8633312/">500 Watchers!</a>", posted by <a href="/user/s0uthw3st/">s0uthw3st</a> <span title="on Feb 24, 2018 08:29 AM" class="popup_date">3 years ago</span></li>
+
+<li><input type="checkbox" name="journals[]" value="8614319">"<a href="/journal/8614319/">Signal Boost - Kabalca and xc404</a>", posted by <a href="/user/s0uthw3st/">s0uthw3st</a> <span title="on Feb 9, 2018 04:51 AM" class="popup_date">4 years ago</span></li>
+
+<li><input type="checkbox" name="journals[]" value="8499889">"<a href="/journal/8499889/">MFF MEME</a>", posted by <a href="/user/taztiger74/">taztiger74</a> <span title="on Nov 16, 2017 04:29 AM" class="popup_date">4 years ago</span></li>
+
+<li><input type="checkbox" name="journals[]" value="8492105">"<a href="/journal/8492105/">Art dump</a>", posted by <a href="/user/namugriffsart/">NamuGriffs_Art</a> <span title="on Nov 10, 2017 04:15 PM" class="popup_date">4 years ago</span></li>
+                    <li class="section-controls">
+                        <input class="button mark-all hidden"  type="button" value="Select all" />
+                        <input class="button mark-streams hidden" type="button" value="Select streams" />
+                        <input class="button remove"           type="submit" value="Remove selected" name="remove-journals"  />
+                    </li>
+                </ul>
+            </fieldset>
+
+
+
+            <div class="global-controls">
+                <input class="button mark-all"  type="button" value="Global select all" />
+                <input class="button remove"    type="submit" value="Global remove selected" name="remove-all" />
+            </div>
+
+        </form>
+
+
+
+        <script type="text/javascript">
+            _fajs.push(function(){
+                //
+                //
+                // Extend the native INPUT element with my custom functions
+                //
+                //
+                Element.addMethods('INPUT', {
+                    init_effects_watch_message: function(elm){
+                        var tmp = elm.up('table');
+                        elm.checked ? tmp.addClassName('checked') : tmp.removeClassName('checked');
+                    },
+                    init_effects_regular_message: function(elm){
+                        var tmp = elm.up('li');
+                        elm.checked ? tmp.addClassName('checked') : tmp.removeClassName('checked');
+                    }
+                });
+
+
+                //
+                // global 'check all' button handler
+                //
+                $$('#messagecenter-other .global-controls .mark-all').invoke('observe', 'click', function(evt){
+                    var button      = evt.element();
+                    var set_checked = !button.hasClassName('selected');
+                    var watch_checkboxes = $$('#messages-watches input[type="checkbox"]');
+                    var other_checkboxes = $$('#messages-comments-submission input[type="checkbox"]', '#messages-comments-journal input[type="checkbox"]', '#messages-shouts input[type="checkbox"]', '#messages-favorites input[type="checkbox"]', '#messages-journals input[type="checkbox"]');
+
+                    if(watch_checkboxes) {
+                        watch_checkboxes.each(function(elm){
+                            elm.checked = set_checked;
+                            elm.init_effects_watch_message();
+                        });
+                    }
+                    if(other_checkboxes) {
+                        other_checkboxes.each(function(elm){
+                            elm.checked = set_checked;
+                            elm.init_effects_regular_message();
+                        });
+                    }
+                    //
+                    button.toggleClassName('selected');
+                });
+
+
+
+                //
+                // Initialization loop.
+                // Goes through all message types possible.
+                //
+                $A(['messages-watches', 'messages-comments-submission', 'messages-comments-journal', 'messages-shouts', 'messages-favorites', 'messages-journals']).each(function(id){
+                    var elm = $(id);
+
+                    if(!elm) {
+                        return;
+                    }
+
+                    elm.select('h3 input')[0].observe('click', function(evt){
+                        var message =evt.element().value + ': All messages of this type will be removed.'+"\n"+'Are you sure?';
+                        if(!confirm(message)) {
+                            evt.stop();
+                        }
+                    });
+
+                    elm.select('li.section-controls input.mark-all').first().removeClassName('hidden').observe('click', function(evt){
+                        var elm = evt.element();
+                        var set_checked = !elm.hasClassName('selected');
+                        elm.up('ul').select('input[type="checkbox"]').each(function(elm){
+                            elm.checked = set_checked;
+                            if(elm.parentNode.tagName.toLowerCase() == 'li') {
+                                elm.init_effects_regular_message();
+                            } else {
+                                elm.init_effects_watch_message();
+                            }
+                        });
+                        elm.toggleClassName('selected');
+                    });
+
+                    //
+                    //
+                    //
+                    // Register hover effects for checkboxes
+                    // All except for the watches table;
+                    //
+                    //
+                    //
+                    if(id != 'messages-watches') {
+                        elm.select('li').each(function(elm){
+                            if(elm.hasClassName('section-controls')) {
+                                return;
+                            }
+                            elm.observe('mouseover', function(evt){
+                                evt.findElement('li').addClassName('hover');
+                            });
+                            elm.observe('mouseout', function(evt){
+                                evt.findElement('li').removeClassName('hover');
+                            });
+
+                            elm.observe('click', function(evt){
+                                var elm = evt.element();
+                                var elm_tag = elm.tagName.toLowerCase();
+                                if(elm_tag == 'a' || elm_tag == 'span') {
+                                    return;
+                                }
+                                var checkbox = evt.findElement('li').down('input[type="checkbox"]');
+                                if(elm_tag != 'input') {
+                                    evt.stop();
+                                    checkbox.checked = !checkbox.checked;
+                                }
+                                checkbox.init_effects_regular_message();
+                            });
+                            $(elm.getElementsByTagName('input')[0]).init_effects_regular_message();
+                        });
+                        //
+                    } else {
+                        //
+                        //
+                        //
+                        // Register hover effects for checkboxes on the watches table
+                        //
+                        //
+                        //
+                        elm.select('input[type="checkbox"]').each(function(elm){
+                            // Fix the non-javascript input width
+                            //
+                            elm.style.width = 'auto';
+                            elm.up('li').observe('click', function(evt){
+                                var elm = evt.element();
+                                // skip clicks on avatars and dates
+                                if(['img', 'a'].indexOf(elm.tagName.toLowerCase()) != -1 || elm.hasClassName('popup_date')) {
+                                    return true;
+                                }
+                                var checkbox = evt.findElement('li').down('input[type="checkbox"]');
+                                if (elm.tagName.toLowerCase() != 'input') {
+                                    evt.stop();
+                                    checkbox.checked = !checkbox.checked;
+                                }
+                                checkbox.init_effects_watch_message();
+                            });
+                            elm.init_effects_watch_message();
+                        });
+                    }
+                });
+
+                // click handler on mark-streams button
+                $$('#messages-journals li.section-controls input.mark-streams').first().removeClassName('hidden').observe('click', function(evt) {
+                    var elm = evt.element();
+                    elm.up('ul.message-stream').select('li.stream-notification').each(function(elm) {
+                        var input = elm.down('input');
+                        input.checked = true;
+                        input.init_effects_regular_message();
+                    });
+                });
+
+                // add a special class to journals with the word 'stream' in them
+                $$('#messages-journals li a:first-of-type').each(function(elm){
+                    if(elm.innerHTML.search(/stream/i) !== -1) {
+                        elm.up('li').addClassName('stream-notification');
+                    }
+                });
+            });
+
+    _fajs.push(function(){
+        $$('span.popup_date').each(function(elm){
+            elm.observe('click',function(evt){
+                var elm = evt.element();
+                var tmp=elm.title;
+                elm.title=elm.innerHTML;
+                elm.innerHTML=tmp;
+            })
+        });
+    });
+        </script>
+    </div>
+
+
+
+
+
+
+    </div>
+
+    <div class="footer">
+
+<div class="footerAds">
+    <div class="footerAds__column">
+        <div class="footerAds__slot format--faMediumRectangle jsAdSlot" data-id="footer_left"></div>
+    </div>
+
+    <div class="footerAds__column">
+        <div class="footerAds__slot footerAds__slot--faLogo">
+            <img src="/themes/classic/img/banners/fa_logo.png?v2">
+        </div>
+    </div>
+
+    <div class="footerAds__column">
+        <div class="footerAds__slot format--faSmallRectangle jsAdSlot" data-id="footer_right_top"></div>
+        <div class="footerAds__slot format--faSmallRectangle jsAdSlot" data-id="footer_right_bottom"></div>
+    </div>
+</div>
+
+        <p>
+            <a href="/advertising">Advertising</a> |
+            <a href="https://twitter.com/furaffinity">Twitter</a> |
+            <a href="https://www.facebook.com/furaffinity"> Facebook</a> |
+            <a href="/tos">Terms of Service</a> |
+            <a href="/privacy">Privacy</a> |
+            <a href="/coc">Code of Conduct</a> |
+            <a href="/aup">Upload Policy</a>
+        </p>
+
+        Fur Affinity is &copy; 2005-2022 Frost Dragon Art LLC<br /><br />
+
+                    <center>
+                68318                <b><span title="Measured in the last 900 seconds">Users online</span></b> &mdash;
+                2120 <b>guests</b>,
+                                    16276 <b>registered</b>
+                    and 49922 <b>other</b>
+                                <!-- Online Counter Last Update: Fri, 07 Jan 2022 17:45:52 -0800 -->
+            </center>
+                <div>Limit bot activity to periods with less than 10k registered users online.</div>
+        <br />
+        Page generated in 0.048 seconds [ 8.8% PHP, 91.2% SQL ] (21 queries)        <br />
+        Server Local Time: Jan 7, 2022 05:46 PM    </div>
+
+
+
+    <div id="cookie-notification" class="default-hidden">
+        <div class="text-container">This website uses cookies to enhance your browsing experience. <a href="/privacy" target="_blank">Learn More</a></div>
+        <div class="button-container"><button class="accept">I consent to use cookies</button></div>
+    </div>
+    <script type="text/javascript">
+        _fajs.push(function(){
+            $$('#cookie-notification button').invoke('observe', 'click', function() {
+                setCookie('cc', 1, expiryyear, '/');
+                $('cookie-notification').addClassName('default-hidden');
+            });
+            $('cookie-notification').removeClassName('default-hidden');
+        });
+    </script>
+
+
+
+
+    <script type="text/javascript">
+        _fajs.push(function() {
+            var exists = getCookie('sz');
+            var saved = save_viewport_size();
+            if((!exists && saved) || (exists && saved && exists != saved)) {
+                //window.location.reload();
+            }
+        });
+    </script>
+    <script type="text/javascript" src="/themes/classic/js/prototype.1.7.3.min.js"></script>
+    <script type="text/javascript" src="/themes/classic/js/script.js?u=2021111800"></script>
+    <script type="text/javascript">
+        var server_timestamp = 1641606411;
+        var client_timestamp = ((new Date()).getTime())/1000;
+        var server_timestamp_delta  = server_timestamp - client_timestamp;
+        var sfw_cookie_name = 'sfw';
+        var news_cookie_name = 'n';
+
+                    var adData = {"sizeConfig":[{"labels":["desktopWide"],"mediaQuery":"(min-width: 1065px)","sizesSupported":[[728,90],[300,250],[300,168],[300,600],[160,600]]},{"labels":["desktopNarrow"],"mediaQuery":"(min-width: 720px) and (max-width: 1064px)","sizesSupported":[[728,90],[300,250],[300,168]]},{"labels":["mobile"],"mediaQuery":"(min-width: 0px) and (max-width: 719px)","sizesSupported":[[320,50],[300,50],[320,100]]}],"slotConfig":{"header_middle":{"containerSize":{"desktopWide":[728,100],"desktopNarrow":[728,100],"mobile":[320,100]},"providerPriority":["smart","playwire","inhouse"]},"above_content":{"containerSize":{"desktopWide":[728,100],"desktopNarrow":[728,100],"mobile":[320,100]},"providerPriority":["smart","playwire","inhouse"]},"sidebar":{"containerSize":{"desktopWide":[300,250]},"providerPriority":["smart","playwire","inhouse"]},"sidebar_tall":{"containerSize":{"desktopWide":[300,600]},"providerPriority":["smart","playwire","inhouse"]},"footer_left":{"containerSize":{"desktopWide":[300,200],"desktopNarrow":[300,200],"mobile":[300,200]},"providerPriority":["inhouse"]},"footer_right_top":{"containerSize":{"desktopWide":[300,90],"desktopNarrow":[300,90],"mobile":[300,90]},"providerPriority":["inhouse"]},"footer_right_bottom":{"containerSize":{"desktopWide":[300,90],"desktopNarrow":[300,90],"mobile":[300,90]},"providerPriority":["inhouse"]},"sidebar_top":{"containerSize":{"desktopWide":[300,90]},"providerPriority":["inhouse"]},"sidebar_bottom":{"containerSize":{"desktopWide":[300,90]},"providerPriority":["inhouse"]}},"providerConfig":{"playwire":{"configUrl":"https:\/\/config.playwire.com\/1024443\/v2\/websites\/73185\/banner.json","libraryUrl":"https:\/\/cdn.intergient.com\/ramp.js"},"smart":{"libraryUrl":"https:\/\/ced.sascdn.com\/tag\/3957\/smart.js","networkId":3957,"useDomain":"https:\/\/www15.smartadserver.com","siteId":395697,"pageId":1352961},"inhouse":{"domain":"https:\/\/rv.furaffinity.net","dataPath":"\/live\/www\/delivery\/spc.php","dataVariableName":"OA_output"}},"adConfig":{"smart":{"header_middle":{"default":{"tagId":99690,"tagSize":[728,90]},"sizeOverride":{"mobile":{"tagSize":[[320,50],[320,100],[300,50]]}},"prebidConfig":{"code":"header_middle","mediaTypes":{"banner":{"sizes":[[728,90],[320,50],[300,50],[320,100]]}},"floors":{"currency":"USD","skipRate":5,"modelVersion":"VersionPriceFloorsTooHigh","schema":{"fields":["mediaType"]},"values":{"banner":1}},"bids":[{"bidder":"appnexus","params":{"placementId":22783959,"allowSmallerSizes":true,"position":"above"}}]}},"above_content":{"default":{"tagId":99691,"tagSize":[728,90]},"sizeOverride":{"mobile":{"tagSize":[[320,50],[320,100],[300,50]]}},"prebidConfig":{"code":"above_content","mediaTypes":{"banner":{"sizes":[[728,90],[320,50],[300,50],[320,100]]}},"floors":{"currency":"USD","skipRate":5,"modelVersion":"VersionPriceFloorsTooHigh","schema":{"fields":["mediaType"]},"values":{"banner":1}},"bids":[{"bidder":"appnexus","params":{"placementId":22783959,"allowSmallerSizes":true,"position":"below"}}]}},"sidebar":{"default":{"tagId":98518,"tagSize":[300,250]},"prebidConfig":{"code":"sidebar","mediaTypes":{"banner":{"sizes":[[300,250],[300,168]]}},"floors":{"currency":"USD","skipRate":5,"modelVersion":"VersionPriceFloorsTooHigh","schema":{"fields":["mediaType"]},"values":{"banner":1}},"bids":[{"bidder":"appnexus","params":{"placementId":22783978,"allowSmallerSizes":true}}]}},"sidebar_tall":{"default":{"tagId":98516,"tagSize":[[300,250],[300,600]]},"prebidConfig":{"code":"sidebar_tall","mediaTypes":{"banner":{"sizes":[[300,250],[300,168],[300,600],[160,600]]}},"floors":{"currency":"USD","skipRate":5,"modelVersion":"VersionPriceFloorsTooHigh","schema":{"fields":["mediaType"]},"values":{"banner":1}},"bids":[{"bidder":"appnexus","params":{"placementId":22783993,"allowSmallerSizes":true}}]}}},"playwire":{"header_middle":{"type":"leaderboard_atf"},"sidebar":{"type":"med_rect_atf"},"sidebar_tall":{"type":"sky_atf"}},"inhouse":{"header_middle":{"default":{"tagId":14,"tagSize":[728,90]},"sizeOverride":{"mobile":{"tagId":20,"tagSize":[300,90]}}},"above_content":{"default":{"tagId":16,"tagSize":[728,90]},"sizeOverride":{"mobile":{"tagId":18,"tagSize":[300,90]}}},"sidebar":{"default":{"tagId":12,"tagSize":[300,250]}},"sidebar_tall":{"default":{"tagId":12,"tagSize":[300,250]}},"footer_left":{"default":{"tagId":9,"tagSize":[300,200]}},"footer_right_top":{"default":{"tagId":7,"tagSize":[300,90]}},"footer_right_bottom":{"default":{"tagId":8,"tagSize":[300,90]}},"header_right_left":{"default":{"tagId":1,"tagSize":[300,90]}},"header_right_right":{"default":{"tagId":3,"tagSize":[300,90]}},"sidebar_top":{"default":{"tagId":1,"tagSize":[300,90]}},"sidebar_bottom":{"default":{"tagId":3,"tagSize":[300,90]}}}}};
+            window.fad = new adManager(_faurl.pb, adData.sizeConfig, adData.slotConfig, adData.providerConfig, adData.adConfig, 2);
+            </script>
+
+
+
+    </body>
+</html>
