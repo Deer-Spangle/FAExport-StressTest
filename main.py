@@ -29,14 +29,26 @@ def notifications_page():
 
 # noinspection HttpUrlsUsage,PyBroadException
 class ExportContainer:
-    def __init__(self):
+    def __init__(self, build_path: str = None):
         self.client = docker.from_env()
         self.container = None
+        self.build_path = build_path
+
+    def build_from_source(self) -> str:
+        img = self.client.images.build(
+            path=self.build_path,
+            platform="linux/amd64",
+            rm=True
+        )
+        return img[0].id
 
     def start(self) -> None:
         bypass_url = f"http://host.docker.internal:{flask_port}"
+        image_name = "deerspangle/furaffinity-api"
+        if self.build_path:
+            image_name = self.build_from_source()
         self.container = self.client.containers.run(
-            "deerspangle/furaffinity-api",
+            image_name,
             detach=True,
             ports={
                 9292: 9292
@@ -143,7 +155,7 @@ class ServerThread(threading.Thread):
 if __name__ == '__main__':
     total_request = 5000
     with ServerThread():
-        with ExportContainer():
+        with ExportContainer("FAExport/"):
             count = 0
             requests = 0
             pool = multiprocessing.Pool(10)
