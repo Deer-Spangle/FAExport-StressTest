@@ -1,3 +1,4 @@
-flask
-docker
-requests
+flask~=2.0.2
+docker~=5.0.3
+requests~=2.27.1
+Werkzeug~=2.0.2
