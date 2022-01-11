@@ -157,11 +157,11 @@ if __name__ == '__main__':
     with ServerThread():
         with ExportContainer("FAExport/"):
             count = 0
-            requests = 0
+            num_requests = 0
             pool = multiprocessing.Pool(10)
-            while requests < total_request:
+            while num_requests < total_request:
                 print(f"Checking: {count}")
                 check_mock()
                 multi_check_notifications(pool, 20)
                 count += 1
-                requests += 20
+                num_requests += 20
