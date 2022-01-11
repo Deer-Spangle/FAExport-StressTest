@@ -141,12 +141,15 @@ class ServerThread(threading.Thread):
 
 
 if __name__ == '__main__':
+    total_request = 5000
     with ServerThread():
         with ExportContainer():
             count = 0
-            pool = multiprocessing.Pool(4)
-            while True:
+            requests = 0
+            pool = multiprocessing.Pool(10)
+            while requests < total_request:
                 print(f"Checking: {count}")
                 check_mock()
-                multi_check_notifications(pool, 5)
+                multi_check_notifications(pool, 20)
                 count += 1
+                requests += 20
