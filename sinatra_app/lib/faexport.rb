@@ -170,10 +170,9 @@ module FAExport
       cache("notifications:#{@user_cookie}:#{include_deleted}.#{type}") do
         case type
         when "json"
-          # JSON.pretty_generate @fa.notifications(include_deleted)
-          # TODO: Oh, if I swap for the next line, the error goes away
-          # JSON.pretty_generate({current_user: {"name": @user_cookie}})
-          JSON.pretty_generate({current_user: {"name": @some_obj[:user_cookie]}})
+          # JSON.pretty_generate @fa.notifications(include_deleted)  # Has error
+          # JSON.pretty_generate({current_user: {"name": @user_cookie}})  # No error
+          JSON.pretty_generate({current_user: {"name": @some_obj[:user_cookie]}})  # Has error
         when "xml"
           @fa.notifications(include_deleted).to_xml(root: "results", skip_types: true)
         else
